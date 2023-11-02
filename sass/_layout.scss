@@ -1,0 +1,67 @@
+.container{
+    max-width: 120rem;
+    min-width: 300px;
+    background-color: var(--Grey-light-1);
+    margin: 8rem auto ;
+    @include respond(s1200){
+        margin: 0;
+        max-width: 100%;   
+     }
+
+
+}
+
+.content{
+    display: flex;
+    @include respond(s900){
+        flex-direction: column;
+    }
+    
+}
+.sidebar{
+    flex:0 0 18%;
+    background-color: var( --Grey-dark-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hoter-view{
+    flex :1;
+}
+.detail{
+    display: flex;
+    padding :4.5rem;
+    margin-bottom: 2rem;
+    @include respond(s900){
+        padding :2rem;
+        margin-bottom: 1rem;
+    }
+    @include respond(s600){
+        flex-direction: column;
+    }
+}
+.description{
+    margin-bottom: 2rem;
+    margin-right: 4.5rem;
+    flex: 0 0 60%;
+    font-size: 1.4rem;
+    background-color: var(--Grey-light-2);
+    box-shadow: var(--shadow-light);
+    padding:2rem;
+    color:var(--Grey-dark-2);
+    @include respond(s900){
+        margin-bottom: 1rem;
+        margin-right: 2.5rem;
+        padding: 1rem;
+    }
+}
+.user_reviews{
+    flex: 1;
+    background-color: var(--Grey-light-2);
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
