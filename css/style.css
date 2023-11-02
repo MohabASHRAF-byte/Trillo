@@ -181,8 +181,12 @@ body {
     background-color: var(--Primary);
     border-radius: 50%;
     left: 4rem;
-    top: 4rem;
+    top: 1rem;
     color: var(--Grey-light-1); }
+    @media (max-width: 62.5em) {
+      .user-nav__notification {
+        left: 4rem;
+        top: 4rem; } }
     @media (max-width: 37.5em) {
       .user-nav__notification {
         left: 55%;
@@ -237,6 +241,7 @@ body {
       width: 0; } }
   .sidenav-link, .sidenav-link:link, .sidenav-link:active {
     text-decoration: none;
+    text-align: center;
     font-size: 1.5rem;
     color: var(--Grey-light-1);
     text-transform: uppercase;
@@ -245,16 +250,22 @@ body {
     display: block;
     padding: 1.5rem 3rem;
     position: relative;
+    text-align: center;
     z-index: 10; }
     @media (max-width: 37.5em) {
       .sidenav-link, .sidenav-link:link, .sidenav-link:active {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
   .sidenav-icon {
     height: 1.75rem;
     width: 1.75rem;
     fill: currentColor;
     margin-right: 0.5rem; }
+    @media (max-width: 56.25em) {
+      .sidenav-icon {
+        margin-right: 0; } }
 
 .legal {
   color: var(--Grey-light-1);
@@ -396,13 +407,15 @@ body {
   font-size: 1.2rem;
   justify-content: space-between;
   align-items: center; }
-  .recommendation_gallery-img {
-    box-sizing: content-box;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    border: 0.3rem solid var(--Grey-light-3);
-    margin-left: -1.2rem; }
+  .recommendation_gallery {
+    display: flex; }
+    .recommendation_gallery-img {
+      box-sizing: content-box;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: 0.3rem solid var(--Grey-light-3);
+      margin-left: -1.2rem; }
 
 .review {
   background-color: #fff;
